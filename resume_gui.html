@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    
+<body>
+    
+    <h1>Welcome to Resume Builder</h1>
+    <h2>Basic Information</h2>
+    <p>Name:</p>
+    <input id="name"></input>
+    <p>Address:</p>
+    <input id="address"></input>
+    <p>Email:</p>
+    <input id="email"></input>
+    <p>Phone Number:</p>
+    <input id="phone_number"></input>
+    <p>Resume Type:</p>
+    <select id="resume_type">
+        <option id="type_general" value="General">General</option>
+        <option id="type_finance" value="Finance">Finance</option>
+        <option id="type_technology" value="Technology">Technology</option>
+        <option id="type_consulting" value="Consulting">Consulting</option>
+    </select>
+    <p>Summary:</p>
+    <input id="summary"></input>
+
+    <h2>Education</h2> <!-- need to find a way to be able to replicate these HTML tags so 
+                        people can add more education and such-->
+    <p>School:</p>
+    <input id="school"><select id="ed_status">
+             <option id="current" value="current" selected="selected" onselect="hideClass()">Current</option>
+             <option id="completed" value="completed" onselect="hideExpectedGraduation()">Completed</option>
+    </select>
+    <p id="expected_grad_p">Expected Graduation:</p>
+    <input id="grad_month" value="Enter Month"><input id="grad_year" value="Enter Year">
+    <p id="class_of_p">Class of:</p>
+    <input id="class_of">
+    <p>Education Bullets:</p>
+    <ul id="education_bullets"></ul>
+    <input id="new_edbullet"><button>Add Bullet</button>
+    <br>
+    <button>Add Education Experience</button>
+    
+
+    
+
+    <h2>Work and Volunteer Experience</h2>
+    <p>Company/Organization:</p>
+    <input id="organzation">
+    <p>Location:</p>
+    <input id="work_location">
+    <p>Job Title:</p>
+    <input id="title">
+    <p>Duration:</p>
+    <input id="start_month" value="Enter Start Month"><input id="start_year" value="Enter Start Year"><input id="end_month" value="Enter End Month"><input id="end_year" value="Enter End Year">
+    <p>Experience Bullets:</p>
+    <input id="new_workbullet"><button>Add Bullet</button>
+    <br>
+    <button>Add Work Experience</button>
+
+
+    <h2>Projects</h2>
+    <p>Project Name:</p>
+    <input id="project_name">
+    <p>Project Description Bullets:</p>
+    <input id="project_bullet"><button>Add Bullet</button>
+    <br>
+    <button>Add Project</button>
+    </body>
+    <footer>
+        <button id="submit_form" type="submit">Submit Information</button>
+    </footer>
+
+
+<script>
+function hideClassOf(){
+    document.getElementById("class_of_p").hidden = "hidden"
+}
+    
+function hideExpectedGraduation(){
+}
+</script>
+</html>
